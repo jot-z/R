@@ -79,7 +79,7 @@ for(fold in 1:nFold){
 # Predict the ratings of rocky5 using a number of different models
 
 # Linear Regression, using the 'lm' function
-completeDB <- read.csv("Homework 2 - completeDB.csv")
+completeDB <- read.csv("completeDB.csv")
 # 15 Combinations with fourth interaction btw 4 variables
 InteractionComb = colnames(model.matrix( ~ (-1 + rocky1 + rocky2 + rocky3 + rocky4)^4, completeDB))
 length(InteractionComb) # 15 Combinations with fourth interaction btw 4 variables
