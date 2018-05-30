@@ -1,4 +1,4 @@
-completeDB <- read.csv("Homework 2 - completeDB.csv")
+completeDB <- read.csv("completeDB.csv")
 
 
 
@@ -233,13 +233,13 @@ isTraining = runif(nrow(completeDB)) < .8
 #Split into training and validationData
 trainingData1 = subset(completeDB,isTraining)
 validationData1 = subset(completeDB,!isTraining)
-df_test = read.csv('Homework 2 - Test Set.csv')
+df_test = read.csv('Test Set.csv')
 kknn_best = kknn(rocky5~rocky1+rocky2+rocky3+rocky4,trainingData1, df_test, k = 78) 
 
 
 
 # Put predictions of all models in a dataframe
-df_test = read.csv('Homework 2 - Test Set.csv')
+df_test = read.csv('Test Set.csv')
 rowNum = nrow(df_test)
 df_prediction <- data.frame(matrix(ncol = 4, nrow = rowNum))
 columns <- c("lm", "mars", "nnet","kknn")
