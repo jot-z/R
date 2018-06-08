@@ -1,3 +1,6 @@
+
+########### Trend Detection ############
+
 rm(list=ls())
 library(tm)
 library(topicmodels)
@@ -7,7 +10,6 @@ library(ggplot2)
 #############   Read files   ##############
 ########### into 60 dataframes ############
 ###########################################
-## setwd("/Users/zhangting/Desktop/Spring/CIS 434 Social Media Analytics/B/")
 for (j in 1:5){
   for (i in 1:12){
     filepath <- file.path(paste("~/fb201",j,"/fpost-201",j,"-",i,".csv",sep="")) # file name
